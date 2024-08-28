@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Game Zone</title>
+        <script src="js/codigo.js"></script>
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+
+    <body>
+        <section id="sect_titulo">
+            <h1>Bienvenido a tu zona de juegos.</h1>
+        </section>
+    
+        <section id="sect_selecciona_juego">      
+                <p class="bott_select">
+                    <button id="bott_ppt">Piedra, papel o tijera.</button>
+                </p>
+
+                <p class="bott_select">
+                    <button id="bott_rrr">Ruleta rusa realista.</button>
+                </p>
+
+                <p class="bott_select">
+                    <button id="bott_rr">Ruleta rusa.</button>
+                </p>
+
+                <p class="bott_select">
+                    <button id="bott_text">Textos.</button>
+                </p>
+        </section>
+
+        <section id="sect_ppt" style="display: none">
+            <section id="sect_ppt_int">
+                <h2 class="titulo_juego">Bienvenido a piedra, papel o tijera.</h2>
+
+                <section id="sect_ppt_todo">
+                    <section id="sect_ppt_elije_jugador">
+                            <button id="bott_ppt_piedra" class="bott_select_ppt">Piedra. 👊</button>
+                            <button id="bott_ppt_papel" class="bott_select_ppt">Papel. 🖐</button>
+                            <button id="bott_ppt_tijera" class="bott_select_ppt">Tijera. ✌</button>
+                    </section>
+                    
+                    <div class="contenedor_linea_vertical">
+                        <div class="linea_vertical"></div>
+                    </div>
+
+                    <section id="sect_ppt_batalla">
+                        <section id="sect_ppt_batalla_info">
+                            <p style="display: block; width: 50px; text-align: right">TU</p>
+                            <p><strong><span id="spn_ppt_resultado" style="display: block; width: 100px; text-align: center">EMPIEZA</span></strong></p>
+                            <p style="display: block; width: 50px; text-align: left">PC</p>
+                        </section>
+
+                        <section id="sect_ppt_batalla_pelea">
+                            <p><span id="spn_ppt_eleccion_jugador" style="display: block; font-size: 80px; width: 100px; text-align: left">👋</span></p>
+                            <p>VS.</p>
+                            <p><span id="spn_ppt_eleccion_pc" style="display: block; font-size: 80px; width: 100px; text-align: right">👋</span></p>
+                        </section>
+                    </section>
+                    
+                    <div class="contenedor_linea_vertical">
+                        <div class="linea_vertical"></div>
+                    </div>
+
+                    <section id="sect_ppt_output">
+                        <label for="bott_ppt_reiniciar" style="display: flex; flex-direction: column; justify-content: space-around">
+                            <button id="bott_ppt_info_1" class="bott_ppt_info"><p><span id="spn_ppt_victorias_jugador">0</span> victoria<span id="spn_ppt_victorias(s)_jugador">s</span>.</p></button>
+                            <button id="bott_ppt_info_2" class="bott_ppt_info"><p><span id="spn_ppt_empates">0</span> empate<span id="spn_ppt_empate(s)">s</span>.</p></button>
+                            <button id="bott_ppt_info_3" class="bott_ppt_info"><p><span id="spn_ppt_victorias_pc">0</span> perdida<span id="spn_ppt_victoria(s)_pc">s</span>.</p></button>
+                            <button id="bott_ppt_reiniciar" style="display: none">Reiniciar.</button>
+                        </label>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+        <section id="sect_rrr" style="display: none">
+            <section id="sect_rrr_int">
+                <h2 class="titulo_juego">Bienvenido a la ruleta rusa realista.</h2>
+
+                <section id="sect_rrr_todo">
+                    <section id="sect_rrr_elige_jugador">
+                        <button id="bott_rrr_1" class="bott_select_rrr">1</button>
+                        <button id="bott_rrr_2" class="bott_select_rrr">2</button>
+                        <button id="bott_rrr_3" class="bott_select_rrr">3</button>
+                        <button id="bott_rrr_4" class="bott_select_rrr">4</button>
+                        <button id="bott_rrr_5" class="bott_select_rrr">5</button>
+                        <button id="bott_rrr_6" class="bott_select_rrr">6</button>
+                    </section>
+
+                    <div class="contenedor_linea_vertical">
+                        <div class="linea_vertical"></div>
+                    </div>
+
+                    <section id="sect_rrr_batalla">
+                        <p><strong><span id="rrr_resultado">Empieza.</span></strong></p>
+                        <label for="bott_rrr_disparar"><img src="resources/svg/revolver.svg" alt="Revolver Nagant 1895" width="200" height="200"></label>
+                    </section>
+
+                    <div class="contenedor_linea_vertical">
+                        <div class="linea_vertical"></div>
+                    </div>
+
+                    <section id="sect_rrr_output">
+                        <button class="bott_ppt_info"><p>Elegiste <span id="rrr_elige_jugador">0</span>.</p></button>
+                        <button id="bott_rrr_disparar" class="bott_ppt_info"><p id="rrr_estado_jugador">😁</p></button>
+                        <button id="bott_rrr_reiniciar" class="bott_ppt_info">Reiniciar.</button>
+                    </section>                
+                </section> 
+            </section>
+        </section>
+
+        <section id="sect_rr" style="display: none">
+            <section id="sect_rr_int">
+                <h2 class="titulo_juego">Bienvenido a la ruleta rusa.</h2>
+
+                <section id="sect_rr_todo">
+                    <section id="sect_rr_elige_jugador">
+                        <button id="bott_rr_1" class="bott_select_rr">1</button>
+                        <button id="bott_rr_2" class="bott_select_rr">2</button>
+                        <button id="bott_rr_3" class="bott_select_rr">3</button>
+                        <button id="bott_rr_4" class="bott_select_rr">4</button>
+                        <button id="bott_rr_5" class="bott_select_rr">5</button>
+                        <button id="bott_rr_6" class="bott_select_rr">6</button>
+                    </section>
+
+                    <div class="contenedor_linea_vertical">
+                        <div class="linea_vertical"></div>
+                    </div>
+
+                    <section id="sect_rr_batalla">
+                        <p><strong><span id="spn_rr_resultado">Empieza</span></strong></p>
+                        <label for="bott_rr_disparar"><img src="resources/svg/revolver.svg" alt="Revolver Nagant 1895" width="200" height="200"></label>
+                    </section>
+
+                    <div class="contenedor_linea_vertical">
+                        <div class="linea_vertical"></div>
+                    </div>
+
+                    <section id="sect_rr_output">
+                        <label for="bott_rr_reiniciar" id="label_rr_output">
+                            <button class="bott_rr_info"></p><p>Elegiste <span id="spn_rr_eleccion_jugador">0</span>.</p></button>
+                            <button class="bott_rr_info"><p>Ruleta <span id="spn_rr_eleccion_pc">0</span>.</p></button>
+                            <button class="bott_rr_info"><p><span id="spn_rr_victorias_jugador">0</span> victoria<span id="spn_rr_victorias(s)_jugador">s</span>.</p></button>
+                            <button class="bott_rr_info"><p><span id="spn_rr_victorias_pc">0</span> muerte<span id="spn_rr_ve(z)_pc">s</span>.</p></button>
+                            <button class="bott_rr_info"><p>Racha act. <span id="spn_rr_ganadas_temp">0</span>.</p></button>
+                            <button class="bott_rr_info"><p>Racha <span id="spn_rr_racha">0</span>.</p></button>
+                        </label>
+
+                        <button id="bott_rr_disparar" style="display: none">Disparar</button>
+                        <button id="bott_rr_reiniciar" style="display: none">Reiniciar</button>
+                    </section> 
+                </section>
+            </section>
+        </section>
+
+        <section id="sect_text" style="display: none">
+            <section id="sect_text_int">
+                <h2 class="titulo_juego">Bienvenido al creador de parrafos.</h2>
+                
+                <section id="sect_text_todo">
+                    <section id="sect_text_ingresa">
+                        <button id="bott_text_reiniciar" class="bott_ppt_info">Borrar</button>
+
+                        <div class="contenedor_linea_vertical_text">
+                            <div class="linea_vertical_text"></div>
+                        </div>
+
+                        <input type="text" id="inp_text_jugador" placeholder="Ingrese su texto aquí.">
+
+                        <div class="contenedor_linea_vertical_text">
+                            <div class="linea_vertical_text"></div>
+                        </div>
+
+                        <button id="bott_ingresar_text" class="bott_ppt_info">Ingresar.</button>
+                    </section>
+
+                    <section id="sect_text_sale" style="display: none">
+                        <section id="sect_text_creados"></section>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </body>
+</html>
